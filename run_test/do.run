@@ -1,0 +1,88 @@
+#!/bin/bash -f
+
+./do.clean
+mkdir logs
+
+vlogan_opts="-kdb -full64 -v2005 -sverilog -ntb_opts uvm -timescale=1ns/1ps -f ./all.f -debug_pp -l logs/elaborate.log -o simv"
+
+echo ==========
+echo Simulation Start \!\!\!
+echo ==========
+
+COVERAGE_ON =""
+
+parse_simconfig() {
+  while read line || [ -n "$line" ] ;
+  do
+    if [ -z "$line" ]; then
+      continue
+    elif [[ $line =~ ^# ]]; then
+      continue
+    else
+      if [[ $line =~ 'SEED_NUM' ]]; then
+        seed_num=$(echo "$line" | sed -E 's/SEED_NUM=//')
+        echo "[SIMCFG] SEED_NUM: $seed_num" >> logs/config.log
+      fi
+      if [[ $line =~ 'SEED_RANDOM' ]]; then
+        seed_random=$(echo "$line" | sed -E 's/SEED_RANDOM=//')
+        echo "[SIMCFG] SEED_RANDOM: $seed_random" >> logs/config.log
+      fi
+      if [[ $line =~ 'TEST_NAME' ]]; then
+        TEST_NAME=$(echo "$line" | sed -E 's/TEST_NAME=//')
+        echo "[SIMCFG] TEST_NAME: $TEST_NAME" >> logs/config.log
+      fi
+      if [[ $line =~ 'COVERAGE_ON' ]]; then
+        COVERAGE_ON=$(echo "$line" | sed -E 's/COVERAGE_ON=//')
+        echo "[SIMCFG] COVERAGE_ON: $COVERAGE_ON" >> logs/config.log
+      fi
+      if [[ $line =~ FSDB_DUMP ]]; then
+        dump_option=$(echo "$line" | sed -E 's/FSDB_DUMP=//')
+        echo "[SIMCFG] Dump option: $dump_option" >> logs/config.log
+      fi
+    fi
+  done < ./sim.cfg
+}
+
+if [ -f ./sim.cfg ]; then
+  parse_simconfig
+else
+  echo "[SIMCFG] There is no sim.cfg"
+fi
+
+if [ "$seed_random" == "YES" ]; then
+  seed_num="$(( (RANDOM << 15 ) | RANDOM ))"
+  else
+  seed_num="$seed_num"
+fi
+
+if [ "$coverage" == "ON" ]; then
+  coverage="-cm line+tgl+fsm+branch+cond"
+else
+  coverage=""
+fi
+
+if [ "$dump_option" == "FULL" ]; then
+  dump="FSDB_DUMP=FULL"
+else
+  dump=""
+fi
+
+test_name=$TEST_NAME;
+
+vcs \
+  $vlogan_opts \
+  -debug_access+all \
+  -verdi \
+  +$TEST_NAME=$test_name \
+  $coverage \
+
+./simv \
+  -l ./logs/run.log \
+  +$TEST_NAME \
+  $coverage \
+  +$dump \
+  +ntb_random_seed=$seed_num
+
+  if [ -f ./logs/run.log ]; then
+    ln -sf ./logs/run.log ./run.log
+  fi

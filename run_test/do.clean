@@ -1,0 +1,16 @@
+#!/bin/csh -f
+
+set targets = ( "./logs" "./csrc" "./simv*" "ucli.key" "verdi*" "./novas*" "top.fsdb" "cm.log" "vdCov*" )
+set found = 0
+
+foreach target ($targets)
+  if ( -e $target || -d $target ) then
+    \rm -rf $target run.log
+    set found = 1
+  endif
+end
+
+if ( $found == 1 ) then
+  echo do.clean Success\!\!\!
+
+endif

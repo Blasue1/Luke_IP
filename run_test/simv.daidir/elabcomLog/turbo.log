@@ -1,0 +1,3 @@
+Command Line: /tools/Synopsys/vcs/V-2023.12-SP1/linux64/bin/elabcom -logdir /home/luke/LUKE_IP/run_test/simv.daidir/elabcomLog -simvdaidir /home/luke/LUKE_IP/run_test/simv.daidir -lib /home/luke/LUKE_IP/run_test/simv.daidir/work -saveLevel -elab /home/luke/LUKE_IP/run_test/simv.daidir/kdb -simflow -simdir /home/luke/LUKE_IP/run_test/simv.daidir/kdb_libs -topfile /home/luke/LUKE_IP/run_test/simv.daidir/.elabcomTopFile -pkgfile /home/luke/LUKE_IP/run_test/simv.daidir/.elabcomPkgFile -ssz -ssv -ssy -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389
+uname(Linux jabberwock 4.18.0-553.36.1.el8_10.x86_64 #1 SMP Wed Jan 22 03:07:54 EST 2025 x86_64)
+au time 0.141492 0.124584 0.012550 delta 100966400 100966400 total 351174656 351174656

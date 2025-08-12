@@ -1,0 +1,437 @@
+body {
+    --color1: var(--vscode-editor-background);
+    --color2: var(--vscode-editor-foreground);
+    --color3: var(--vscode-button-foreground);
+    --color4: var(--vscode-button-background);
+    --color5: var(--vscode-checkbox-border);
+    --color6: var(--vscode-badge-background);
+    --color7: #5e5e5e;
+    --color8: rgba(0, 0, 0, .05);
+
+    color:  var(--color2); 
+    background-color: var(--color1); 
+}
+
+select {
+    background: var(--color1)  !important;
+}
+
+.col-xs-2 {
+    background: var(--color1) !important;
+}
+
+.btn-default {
+    color: var(--color2);
+    background: var(--color1);
+    border-color: var(--color5);
+}
+
+.btn-default:hover {
+    color: var(--color2);
+    background: var(--color1);
+    filter: brightness(80%);
+    border-color: var(--color5);
+}
+
+.table td, .table th {
+    background-color: var(--color1)  !important;
+}
+
+.table-bordered th, .table-bordered td {
+    background-color: var(--color1)  !important;
+    border: 1px solid var(--color5)  !important;
+}
+
+.list-group-item:hover,
+.list-group-item:focus,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    text-decoration: none;
+    color: var(--color2);
+    background-color:  var(--color1)!important;
+    filter: brightness(75%);
+}
+
+.list-group-item {
+    background-color:var(--color1) ;
+    border: 1px solid var(--color5) !important;
+}
+
+.panel, .panel-heading {
+    color:  var(--color2) !important ;
+    background-color: var(--color1) !important ;
+    border-color: 1px solid var(--color5) !important;
+}
+
+.panel-group .panel-heading{
+    border-top: 1px solid var(--color5) !important;
+}
+
+.panel-default {
+    border-color: var(--color5) !important;
+    border-bottom-color: var(--color5) !important;
+}
+
+.panel-default > .panel-heading {
+    background-color: var(--color1) !important;
+    filter: brightness(90%);
+}
+
+.panel-group .panel-footer + .panel-collapse .panel-body {
+    border-bottom: 1px solid var(--color5) !important;
+}
+
+.panel-heading {
+    border-bottom: 1px solid var(--color5) !important ;
+}
+
+.page-header {
+    border-bottom: 1px solid var(--color5) !important ;
+}
+
+.form-control {
+    color: var(--color2) ;
+    background-color: var(--color1) ;
+    border: 1px solid var(--color5) !important ;
+    -webkit-box-shadow: inset 0 1px 1px var(--color5) !important;
+    box-shadow: inset 0 1px 1px var(--color5) !important;
+}
+
+.progress {
+    background-color: var(--color5) !important;
+}
+
+div.DTS div.dataTables_scrollHead, div.DTS div.dataTables_scrollFoot {
+    background-color: var(--color1) !important;
+}
+
+.table-bordered {
+    border: 1px solid var(--color5) !important ; 
+}
+
+.badge {
+    color: var(--color1);
+    background: var(--color2);
+}
+
+.selectize-input {
+    background: var(--color1); 
+    color: var(--color2); 
+    border: 1px solid var(--color5) !important;
+    filter: brightness(75%);
+}
+
+.selectize-dropdown-content { 
+    background: var(--color1); 
+    color: var(--color2); 
+    border: 1px solid var(--color5) !important;
+    filter: brightness(75%);
+}
+
+tspan {
+    fill: var(--color2) !important;
+}
+
+#filters-apply {
+    width: 100%;
+    background-color: var(--color7);
+    color: var(--color2);
+    border-color: var(--color6);
+}
+
+.chosen-container .chosen-drop {
+    background: var(--color1);
+    border: 1px solid var(--color5);
+    -webkit-box-shadow: 0 8px 8px var(--color2);
+    box-shadow: 0 8px 8px var(--color6);
+}
+
+.chosen-container .chosen-results {
+    color: var(--color2);
+}
+
+.chosen-container .chosen-results li em {
+    background: var(--color1);
+}
+
+.chosen-container .chosen-results li.highlighted {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.chosen-container .chosen-results .no-results {
+    background: var(--color1);
+}
+
+.chosen-container .chosen-results-scroll {
+    background: var(--color1);
+}
+
+.chosen-container-single .chosen-single {
+    background-color: var(--color1);
+    border: 1px solid var(--color5);
+    -webkit-box-shadow: inset 0 1px 1px var(--color1);
+    box-shadow: inset 0 1px 1px var(--color1);
+    color: var(--color2);
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+    border: 1px solid var(--color5);
+    -webkit-box-shadow: inset 0 1px 1px var(--color1);
+    box-shadow: inset 0 1px 1px var(--color1);
+}
+
+.chosen-container-multi .chosen-choices {
+    background-color: var(--color1);
+    border: 1px solid var(--color5);
+    -webkit-box-shadow: inset 0 1px 1px var(--color1);
+    box-shadow: inset 0 1px 1px var(--color1);
+}
+
+.chosen-container-multi .chosen-choices .search-field input[type="text"] {
+    color: var(--color1);
+}
+
+.chosen-container-multi .chosen-choices .search-choice {
+    background-color: var(--color1);
+    border: 1px solid var(--color5);
+    background-image: -webkit-linear-gradient(top, var(--color1) 0%, var(--color1) 100%);
+    background-image: -o-linear-gradient(top, var(--color1) 0%, var(--color1) 100%);
+    background-image: linear-gradient(to bottom, var(--color1) 0%, var(--color1) 100%);
+    -webkit-box-shadow: inset 0 1px 1px var(--color1);
+    box-shadow: inset 0 1px 1px var(--color1);
+}
+
+.chosen-container-multi .chosen-choices .search-choice-focus {
+    background: var(--color1);
+}
+
+.chosen-container-active .chosen-single {
+    border: 1px solid var(--color1);
+    -webkit-box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+    box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+    background-color: var(--color1);
+    border: 1px solid var(--color1);
+    -webkit-box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+    box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+}
+
+.chosen-container-active .chosen-choices {
+    border: 1px solid var(--color1);
+    -webkit-box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+    box-shadow: 0 1px 1px var(--color1) inset, 0 0 8px var(--color1);
+}
+  
+.chosen-container-active .chosen-choices .search-field input[type="text"] {
+    color: var(--color1) !important;
+}
+
+body > .container-fluid > .row > div {
+    border-right-color : var(--color5);
+    -webkit-box-shadow : inset 0 1px 1px var(--color8);
+    box-shadow : inset 0 1px 1px var(--color8);
+}
+
+body > .container-fluid > .row > div:nth-child(1) {
+    background-color: lighten(var(--color5), 90%);
+    filter: brightness(90%);
+    overflow: hidden;
+}
+
+body > .container-fluid > .row > div:nth-child(2) {
+    background-color: lighten(var(--color5), 90%);
+    filter: brightness(95%);
+}
+
+.glyphicon-ban-circle, .glyphicon-search {
+    background-color: var(--color5);
+    filter: brightness(95%);
+}
+
+a {
+    color: var(--color4);
+    filter: brightness(75%);
+}
+
+.label-a {
+    color: var(--color1);
+    background-color: var(--color7);
+    border-color: var(--color7);
+}
+
+.label-b {
+    color: var(--color7);
+    background-color: var(--color1);
+    border-color: var(--color7);
+}
+
+hr {
+    visibility: hidden;
+}
+
+.filter-remove-all {
+    color : var(--color2);
+}
+
+.selectize-input.full {
+    background-color: var(--color1);
+}
+
+.round-corner-buttons {
+    border-color : var(--color5);
+    -webkit-box-shadow : inset 0 1px 1px var(--color8);
+    box-shadow : inset 0 1px 1px var(--color8);
+    background-color : var(--color1);
+    color : var(--color2);
+}
+
+.bg-warning {
+    fill: rgb(251, 201, 53);
+}
+
+.round-corner-buttons .glyphicon:hover {
+    color : var(--color7);
+}
+
+#description-panel > div > div > p {
+    color : var(--color2);
+}
+
+#description-panel > div > div > pre {
+    border-left-color : var(--color5);
+    color : var(--color2);
+}
+
+#description-panel > div > div:first-of-type > pre, #description-panel > div > div:hover > pre {
+    border-left-color : var(--color5);
+    color : var(--color2);
+}
+
+#description-panel > div > div:first-of-type > p, #description-panel > div > div:hover > p {
+    color : var(--color2);
+}
+
+.selectize-dropdown, .selectize-dropdown.form-control {
+    border : 1px solid var(--color5);
+}
+
+
+#checks-tree .node-selected > .icon > .glyphicon {
+    color: var(--color2) !important;
+    filter: brightness(75%)
+}
+
+#checks-tree .node-selected {
+    background-color: var(--color1) !important;
+    color: var(--color2) !important;
+    filter: brightness(75%);
+}
+
+#hits-table {
+    background-color : var(--color1);
+}
+
+#hits-table > tbody > tr:hover > td {
+    background-color :var(--color1) !important;
+    color: var(--color2) !important;
+    filter: brightness(75%);
+}
+
+#hits-table > tbody > tr.selected > td {
+    background-color :var(--color1) !important;
+    color: var(--color2) !important;
+    filter: brightness(75%);
+}
+
+#hits-table > tbody > tr.selected > td > .glyphicon {
+    color : var(--color2);
+}
+
+#loader {
+    background : var(--color1);
+}
+
+#summary {
+    background : var(--color1);
+}
+
+.alert-info {
+    color: var(--vscode-editorInfo-foreground);
+    background-color: var(--vscode-inputValidation-infoBackground);
+    border-color: var(--vscode-inputValidation-infoBorder);
+}
+
+.alert-warning {
+    color: var(--vscode-editorWarning-foreground);
+    background-color: var(--vscode-inputValidation-warningBackground);
+    border-color: var(--vscode-inputValidation-warningBorder);
+}
+
+.popup-icon:hover {
+    color : var(--color2) !important;
+}
+
+.popup-icon:hover {
+    color : var(--color2) !important;
+    background-color : var(--color7);
+}
+
+tr.selected .popup-icon {
+    color : var(--color2) !important;
+}
+
+tr.selected .popup-icon:hover {
+    color : var(--color2) !important;
+    background-color : var(--color1);
+}
+
+#reload-page:hover {
+    color : var(--color7);
+}
+
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-content {
+    background-color: var(--color1);
+    border: 1px solid var(--color5);
+    color: var(--color2);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--color5);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--color5);
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: var(--color1);
+  filter: brightness(80%);
+}
+
+.chosen-container .chosen-drop {
+    -webkit-box-shadow: 0 8px 8px var(--color5);
+    box-shadow: 0 8px 8px var(--color5);
+}
+
+tr.selected .popup-icon {
+    color: var(--color2);
+    background-color: var(--color1);
+}
+
+.selectize-input.focus {
+    -webkit-box-shadow: 0 8px 8px var(--color5);
+    box-shadow: 0 8px 8px var(--color5);
+}

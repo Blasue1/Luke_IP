@@ -1,0 +1,55 @@
+Command: /home/luke/LUKE_IP/run_test/simv -l ./logs/run.log +simple_test -ucli -i /tools/Amiq/eclipse_dvt/25.1.11//libs/dvt_debug_tcl/dvt_debug.tcl +FSDB_DUMP=FULL +ntb_random_seed=708524864
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP1_Full64; Runtime version V-2023.12-SP1_Full64;  Aug  4 09:56 2025
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+ucli% if {[string match [info script] $::env(DVT_HOME)/libs/dvt_debug_tcl/dvt_debug.tcl]} {
+    source $::env(DVT_HOME)/libs/dvt_debug_tcl/dvt_debug_main.tcl
+} elseif {[catch { ::tcl::source $::env(DVT_HOME)/libs/dvt_debug_tcl/dvt_debug_main.tcl }]} {
+    source $::env(DVT_HOME)/libs/dvt_debug_tcl/dvt_debug_main.tcl
+}
+DVT server listening on host: jabberwock, port: 37563
+ucli% DVT client connected
+DVT client connected
+UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP1, Linux x86_64/64bit, 11/30/2024
+(C) 1996 - 2024 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+UVM_INFO ../tb/simple_monitor.sv(32) @ 5000: uvm_test_top.m_env.agent0.mon [MON] LUKE_MON_WRITE: write=1 data_in=199
+UVM_INFO ../tb/simple_scoreboard.sv(28) @ 5000: uvm_test_top.m_env.sb0 [SB] WRITE: data=199
+UVM_INFO ../tb/simple_scoreboard.sv(43) @ 5000: uvm_test_top.m_env.sb0 [SB] write_size=1, read_size=0
+UVM_INFO ../tb/simple_scoreboard.sv(36) @ 5000: uvm_test_top.m_env.sb0 [SB] match/mismatch=          0/          0
+UVM_INFO ../tb/simple_monitor.sv(32) @ 25000: uvm_test_top.m_env.agent0.mon [MON] LUKE_MON_WRITE: write=1 data_in=189
+UVM_INFO ../tb/simple_scoreboard.sv(28) @ 25000: uvm_test_top.m_env.sb0 [SB] WRITE: data=189
+UVM_INFO ../tb/simple_scoreboard.sv(43) @ 25000: uvm_test_top.m_env.sb0 [SB] write_size=2, read_size=0
+UVM_INFO ../tb/simple_scoreboard.sv(36) @ 25000: uvm_test_top.m_env.sb0 [SB] match/mismatch=          0/          0
+UVM_INFO ../tb/simple_monitor.sv(43) @ 25000: uvm_test_top.m_env.agent0.mon [MON] LUKE_MON_READ: read=1, data_out=199
+UVM_INFO ../tb/simple_scoreboard.sv(32) @ 25000: uvm_test_top.m_env.sb0 [SB] READ: data_out=199
+UVM_INFO ../tb/simple_scoreboard.sv(43) @ 25000: uvm_test_top.m_env.sb0 [SB] write_size=2, read_size=1
+UVM_INFO ../tb/simple_scoreboard.sv(54) @ 25000: uvm_test_top.m_env.sb0 [SB] Match: write_data=199, data_out=199
+UVM_INFO ../tb/simple_scoreboard.sv(36) @ 25000: uvm_test_top.m_env.sb0 [SB] match/mismatch=          1/          0
+UVM_INFO ../tb/simple_monitor.sv(32) @ 45000: uvm_test_top.m_env.agent0.mon [MON] LUKE_MON_WRITE: write=1 data_in=196
+UVM_INFO ../tb/simple_scoreboard.sv(28) @ 45000: uvm_test_top.m_env.sb0 [SB] WRITE: data=196
